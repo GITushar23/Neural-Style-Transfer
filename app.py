@@ -25,7 +25,7 @@ if st.button("Generate Image"):
             'alpha': alpha,
             'beta': beta
         }
-        response = requests.post("http://127.0.0.1:5000/style_transfer", files=files, data=data)
+        response = requests.post(" https://2ae8-59-178-29-120.ngrok-free.app/style_transfer", files=files, data=data)
         if response.status_code == 200:
             image = Image.open(io.BytesIO(response.content))
             st.image(image, caption="Generated Image")
